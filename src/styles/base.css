@@ -131,3 +131,4 @@ button { font: inherit; cursor: pointer; }
 .verified { display: inline-flex; align-items: center; gap: 4px; font-size: 0.78rem; font-weight: 600; color: var(--brand); }
 .avatar { display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--gold-soft); color: var(--gold-text); font-weight: 700; font-size: 0.85rem; flex-shrink: 0; }
 .avatar.lg { width: 48px; height: 48px; font-size: 1rem; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }

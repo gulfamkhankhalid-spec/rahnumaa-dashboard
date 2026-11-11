@@ -40,7 +40,11 @@ export default function Launcher() {
               ) : (
                 <p className="muted small">{it.release}</p>
               )}
-              <Link to={`/skillsrator/${it.slug}`} className="link-arrow small">About {it.name} <Icon name="arrow" size={14} /></Link>
+              {it.slug === 'skill-academy' ? (
+                <Link to="/academy" className="link-arrow small">Open Skill Academy <Icon name="arrow" size={14} /></Link>
+              ) : (
+                <Link to={`/skillsrator/${it.slug}`} className="link-arrow small">About {it.name} <Icon name="arrow" size={14} /></Link>
+              )}
             </article>
           )
         })}

@@ -19,6 +19,9 @@ export default function Initiative() {
           <h1>{it.name}</h1>
           <p className="initiative-tagline big">{it.tagline}</p>
           <p className="lead">{it.description}</p>
+          {it.slug === 'skill-academy' && (
+            <Link to="/academy" className="btn btn-primary btn-lg initiative-cta">Open Skill Academy <Icon name="arrow" size={18} /></Link>
+          )}
           <div className="meta-row">
             <span><Icon name="users" size={16} /> {it.forWhom}</span>
             <span><Icon name="calendar" size={16} /> {it.release}</span>

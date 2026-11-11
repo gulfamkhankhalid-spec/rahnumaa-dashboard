@@ -5,6 +5,7 @@ import Logo from './Logo'
 
 const nav = [
   { to: '/skillsrator', label: 'Skillsrator' },
+  { to: '/academy', label: 'Skill Academy' },
   { to: '/guidance', label: 'Career Guidance' },
   { to: '/abc', label: 'ABC Certification' },
   { to: '/pilot', label: 'Pilot Domains' },
@@ -60,6 +61,7 @@ export default function SiteLayout() {
           <div>
             <h4>Platform</h4>
             <Link to="/skillsrator">Skillsrator</Link>
+            <Link to="/academy">Skill Academy</Link>
             <Link to="/guidance">Career Guidance</Link>
             <Link to="/abc">ABC Certification</Link>
             <Link to="/roadmap">Roadmap</Link>

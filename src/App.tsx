@@ -1,4 +1,15 @@
 import { Route, Routes } from 'react-router-dom'
+import AcademyLayout from './academy/AcademyLayout'
+import AcademyHome from './academy/pages/AcademyHome'
+import Browse from './academy/pages/Browse'
+import Certificate, { Verify } from './academy/pages/Certificate'
+import CourseDetail from './academy/pages/CourseDetail'
+import { InstitutionAdmin, InstitutionsLanding } from './academy/pages/Institutions'
+import InstructorProfile from './academy/pages/InstructorProfile'
+import Learn from './academy/pages/Learn'
+import MyLearning from './academy/pages/MyLearning'
+import ProgramDetail from './academy/pages/ProgramDetail'
+import { CourseBuilder, TeachDashboard, TeachLanding } from './academy/pages/Teach'
 import AppLayout from './components/AppLayout'
 import SiteLayout from './components/SiteLayout'
 import Assessments from './pages/app/Assessments'
@@ -35,6 +46,25 @@ export default function App() {
         <Route path="roadmap" element={<Roadmap />} />
         <Route path="login" element={<Auth mode="login" />} />
         <Route path="signup" element={<Auth mode="signup" />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
+      <Route path="academy" element={<AcademyLayout />}>
+        <Route index element={<AcademyHome />} />
+        <Route path="browse" element={<Browse />} />
+        <Route path="course/:slug" element={<CourseDetail />} />
+        <Route path="program/:slug" element={<ProgramDetail />} />
+        <Route path="learn/:slug" element={<Learn />} />
+        <Route path="learn/:slug/:lessonId" element={<Learn />} />
+        <Route path="my-learning" element={<MyLearning />} />
+        <Route path="certificate/:code" element={<Certificate />} />
+        <Route path="verify" element={<Verify />} />
+        <Route path="instructor/:id" element={<InstructorProfile />} />
+        <Route path="teach" element={<TeachLanding />} />
+        <Route path="teach/dashboard" element={<TeachDashboard />} />
+        <Route path="teach/new" element={<CourseBuilder />} />
+        <Route path="teach/edit/:slug" element={<CourseBuilder />} />
+        <Route path="institutions" element={<InstitutionsLanding />} />
+        <Route path="institutions/admin" element={<InstitutionAdmin />} />
         <Route path="*" element={<NotFound />} />
       </Route>
       <Route path="app" element={<AppLayout />}>
