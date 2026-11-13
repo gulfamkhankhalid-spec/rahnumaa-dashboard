@@ -184,7 +184,7 @@ export function CourseBuilder() {
         <div className="ac-form-row">
           <label>Category<select value={category} onChange={(e) => setCategory(e.target.value)}>{categories.map((c) => <option key={c.slug} value={c.slug}>{c.name}</option>)}</select></label>
           <label>Level<select value={level} onChange={(e) => setLevel(e.target.value as Level)}>{['Beginner', 'Intermediate', 'Advanced'].map((l) => <option key={l}>{l}</option>)}</select></label>
-          <label>Certificate price (PKR, 0 = free)<input type="number" min={0} step={500} value={price} onChange={(e) => setPrice(Number(e.target.value))} /></label>
+          <label>Certificate price (PKR, 0 = free)<input type="number" min={0} step="any" value={price} onChange={(e) => setPrice(Number(e.target.value))} /></label>
         </div>
         <fieldset className="ac-inline">
           <legend>Languages</legend>

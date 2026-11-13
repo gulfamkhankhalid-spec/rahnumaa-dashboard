@@ -18,6 +18,8 @@ const recommended: Record<string, string> = {
   'skill-magnets': 'Join the Web Development community',
 }
 
+const live: Record<string, string> = { 'skill-academy': '/academy', 'skill-lancer': '/lancer' }
+
 export default function Launcher() {
   return (
     <>
@@ -40,8 +42,8 @@ export default function Launcher() {
               ) : (
                 <p className="muted small">{it.release}</p>
               )}
-              {it.slug === 'skill-academy' ? (
-                <Link to="/academy" className="link-arrow small">Open Skill Academy <Icon name="arrow" size={14} /></Link>
+              {live[it.slug] ? (
+                <Link to={live[it.slug]} className="link-arrow small">Open {it.name} <Icon name="arrow" size={14} /></Link>
               ) : (
                 <Link to={`/skillsrator/${it.slug}`} className="link-arrow small">About {it.name} <Icon name="arrow" size={14} /></Link>
               )}

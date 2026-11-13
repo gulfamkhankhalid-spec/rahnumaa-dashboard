@@ -11,6 +11,20 @@ import MyLearning from './academy/pages/MyLearning'
 import ProgramDetail from './academy/pages/ProgramDetail'
 import { CourseBuilder, TeachDashboard, TeachLanding } from './academy/pages/Teach'
 import AppLayout from './components/AppLayout'
+import LancerLayout from './lancer/LancerLayout'
+import { ClientDashboard, ClientProject } from './lancer/pages/Client'
+import { ContractPage, OrderPage } from './lancer/pages/Deal'
+import GigBuilder from './lancer/pages/GigBuilder'
+import GigDetail from './lancer/pages/GigDetail'
+import Gigs from './lancer/pages/Gigs'
+import HowItWorks from './lancer/pages/HowItWorks'
+import LancerHome from './lancer/pages/LancerHome'
+import Messages from './lancer/pages/Messages'
+import PostProject from './lancer/pages/PostProject'
+import SellerDashboard from './lancer/pages/Seller'
+import { FreelancerProfile, Talent } from './lancer/pages/Talent'
+import Wallet from './lancer/pages/Wallet'
+import { FindWork, ProjectDetail } from './lancer/pages/Work'
 import SiteLayout from './components/SiteLayout'
 import Assessments from './pages/app/Assessments'
 import Counselors from './pages/app/Counselors'
@@ -65,6 +79,28 @@ export default function App() {
         <Route path="teach/edit/:slug" element={<CourseBuilder />} />
         <Route path="institutions" element={<InstitutionsLanding />} />
         <Route path="institutions/admin" element={<InstitutionAdmin />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
+      <Route path="lancer" element={<LancerLayout />}>
+        <Route index element={<LancerHome />} />
+        <Route path="gigs" element={<Gigs />} />
+        <Route path="gig/:id" element={<GigDetail />} />
+        <Route path="talent" element={<Talent />} />
+        <Route path="u/:id" element={<FreelancerProfile />} />
+        <Route path="post" element={<PostProject />} />
+        <Route path="client" element={<ClientDashboard />} />
+        <Route path="client/project/:id" element={<ClientProject />} />
+        <Route path="projects" element={<FindWork />} />
+        <Route path="project/:id" element={<ProjectDetail />} />
+        <Route path="seller" element={<SellerDashboard />} />
+        <Route path="seller/gig/new" element={<GigBuilder />} />
+        <Route path="seller/gig/:id" element={<GigBuilder />} />
+        <Route path="order/:id" element={<OrderPage />} />
+        <Route path="contract/:id" element={<ContractPage />} />
+        <Route path="messages" element={<Messages />} />
+        <Route path="messages/:threadId" element={<Messages />} />
+        <Route path="wallet" element={<Wallet />} />
+        <Route path="how-it-works" element={<HowItWorks />} />
         <Route path="*" element={<NotFound />} />
       </Route>
       <Route path="app" element={<AppLayout />}>

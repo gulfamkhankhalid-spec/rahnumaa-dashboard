@@ -3,6 +3,8 @@ import Icon from '../../components/Icon'
 import { initiatives } from '../../data/site'
 import NotFound from './NotFound'
 
+const live: Record<string, string> = { 'skill-academy': '/academy', 'skill-lancer': '/lancer' }
+
 export default function Initiative() {
   const { slug } = useParams()
   const index = initiatives.findIndex((i) => i.slug === slug)
@@ -19,8 +21,8 @@ export default function Initiative() {
           <h1>{it.name}</h1>
           <p className="initiative-tagline big">{it.tagline}</p>
           <p className="lead">{it.description}</p>
-          {it.slug === 'skill-academy' && (
-            <Link to="/academy" className="btn btn-primary btn-lg initiative-cta">Open Skill Academy <Icon name="arrow" size={18} /></Link>
+          {live[it.slug] && (
+            <Link to={live[it.slug]} className="btn btn-primary btn-lg initiative-cta">Open {it.name} <Icon name="arrow" size={18} /></Link>
           )}
           <div className="meta-row">
             <span><Icon name="users" size={16} /> {it.forWhom}</span>
