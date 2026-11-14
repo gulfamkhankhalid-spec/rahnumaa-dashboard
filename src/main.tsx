@@ -6,6 +6,7 @@ import './styles/site.css'
 import './styles/app.css'
 import './styles/academy.css'
 import './styles/lancer.css'
+import './styles/sdc.css'
 import App from './App'
 
 createRoot(document.getElementById('root')!).render(

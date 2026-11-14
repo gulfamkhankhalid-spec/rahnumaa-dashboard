@@ -112,6 +112,12 @@ export default function AcademyHome() {
             <p className="muted">Give your students or staff access to the catalogue, assign learning and track progress.</p>
             <span className="link-arrow">See plans <Icon name="arrow" size={14} /></span>
           </Link>
+          <Link to="/sdc" className="card ac-promo">
+            <Icon name="award" size={26} />
+            <h3>Want an instructor and a cohort?</h3>
+            <p className="muted">The Skill Development Center offers guided, assessed training with live classes, labs and a path to ABC certification.</p>
+            <span className="link-arrow">Explore the Skill Development Center <Icon name="arrow" size={14} /></span>
+          </Link>
           <Link to="/skillsrator/skill-education" className="card ac-promo">
             <Icon name="book" size={26} />
             <h3>Looking for a full degree?</h3>

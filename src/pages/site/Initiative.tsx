@@ -3,7 +3,7 @@ import Icon from '../../components/Icon'
 import { initiatives } from '../../data/site'
 import NotFound from './NotFound'
 
-const live: Record<string, string> = { 'skill-academy': '/academy', 'skill-lancer': '/lancer' }
+const live: Record<string, string> = { 'skill-academy': '/academy', 'skill-lancer': '/lancer', 'skill-development-center': '/sdc' }
 
 export default function Initiative() {
   const { slug } = useParams()

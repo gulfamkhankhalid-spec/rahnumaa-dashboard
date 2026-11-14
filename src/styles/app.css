@@ -156,3 +156,4 @@
   .demo-banner { font-size: 0.78rem; padding: 6px 12px; gap: 4px 8px; }
   .demo-banner svg { display: none; }
 }
+.app-grid > * { min-width: 0; }

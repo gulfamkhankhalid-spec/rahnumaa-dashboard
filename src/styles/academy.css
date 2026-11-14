@@ -80,7 +80,7 @@
 
 .ac-continue { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .ac-continue-card { text-decoration: none; color: var(--text); display: flex; flex-direction: column; gap: 10px; }
-.ac-split-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.ac-split-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
 .ac-promo { text-decoration: none; color: var(--text); display: flex; flex-direction: column; gap: 8px; }
 .ac-promo > svg { color: var(--brand); }
 .ac-promo h3 { margin: 4px 0 0 !important; }

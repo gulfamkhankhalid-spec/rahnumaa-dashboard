@@ -18,7 +18,7 @@ const recommended: Record<string, string> = {
   'skill-magnets': 'Join the Web Development community',
 }
 
-const live: Record<string, string> = { 'skill-academy': '/academy', 'skill-lancer': '/lancer' }
+const live: Record<string, string> = { 'skill-academy': '/academy', 'skill-lancer': '/lancer', 'skill-development-center': '/sdc' }
 
 export default function Launcher() {
   return (

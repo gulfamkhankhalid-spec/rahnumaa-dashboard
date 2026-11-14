@@ -11,6 +11,14 @@ import MyLearning from './academy/pages/MyLearning'
 import ProgramDetail from './academy/pages/ProgramDetail'
 import { CourseBuilder, TeachDashboard, TeachLanding } from './academy/pages/Teach'
 import AppLayout from './components/AppLayout'
+import SdcLayout from './sdc/SdcLayout'
+import Classroom, { ItemView } from './sdc/pages/Classroom'
+import { Assessment, Calendar, Certificate as SdcCertificate, Guardian, Verify as SdcVerify } from './sdc/pages/Extras'
+import SdcLearn from './sdc/pages/Learn'
+import SdcHome from './sdc/pages/SdcHome'
+import SkillDetail from './sdc/pages/SkillDetail'
+import SdcSkills from './sdc/pages/Skills'
+import { Centre, CohortAdmin, Instructor, NewCohort } from './sdc/pages/Staff'
 import LancerLayout from './lancer/LancerLayout'
 import { ClientDashboard, ClientProject } from './lancer/pages/Client'
 import { ContractPage, OrderPage } from './lancer/pages/Deal'
@@ -101,6 +109,24 @@ export default function App() {
         <Route path="messages/:threadId" element={<Messages />} />
         <Route path="wallet" element={<Wallet />} />
         <Route path="how-it-works" element={<HowItWorks />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
+      <Route path="sdc" element={<SdcLayout />}>
+        <Route index element={<SdcHome />} />
+        <Route path="skills" element={<SdcSkills />} />
+        <Route path="skill/:id" element={<SkillDetail />} />
+        <Route path="learn" element={<SdcLearn />} />
+        <Route path="class/:enrolId" element={<Classroom />} />
+        <Route path="class/:enrolId/item/:itemId" element={<ItemView />} />
+        <Route path="calendar" element={<Calendar />} />
+        <Route path="assessment" element={<Assessment />} />
+        <Route path="certificate/:code" element={<SdcCertificate />} />
+        <Route path="verify" element={<SdcVerify />} />
+        <Route path="guardian" element={<Guardian />} />
+        <Route path="instructor" element={<Instructor />} />
+        <Route path="instructor/cohort/:id" element={<CohortAdmin />} />
+        <Route path="instructor/new" element={<NewCohort />} />
+        <Route path="centre" element={<Centre />} />
         <Route path="*" element={<NotFound />} />
       </Route>
       <Route path="app" element={<AppLayout />}>
