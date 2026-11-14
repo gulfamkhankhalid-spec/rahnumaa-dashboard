@@ -11,6 +11,11 @@ import MyLearning from './academy/pages/MyLearning'
 import ProgramDetail from './academy/pages/ProgramDetail'
 import { CourseBuilder, TeachDashboard, TeachLanding } from './academy/pages/Teach'
 import AppLayout from './components/AppLayout'
+import MagnetsLayout from './magnets/MagnetsLayout'
+import MagnetsDiscover from './magnets/pages/Discover'
+import MagnetsHome from './magnets/pages/Home'
+import MagnetPage from './magnets/pages/MagnetPage'
+import { Admin as MagnetsAdmin, Chats, NewMagnet, Notifications, PostPage, Profile } from './magnets/pages/More'
 import SdcLayout from './sdc/SdcLayout'
 import Classroom, { ItemView } from './sdc/pages/Classroom'
 import { Assessment, Calendar, Certificate as SdcCertificate, Guardian, Verify as SdcVerify } from './sdc/pages/Extras'
@@ -127,6 +132,20 @@ export default function App() {
         <Route path="instructor/cohort/:id" element={<CohortAdmin />} />
         <Route path="instructor/new" element={<NewCohort />} />
         <Route path="centre" element={<Centre />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
+      <Route path="magnets" element={<MagnetsLayout />}>
+        <Route index element={<MagnetsHome />} />
+        <Route path="discover" element={<MagnetsDiscover />} />
+        <Route path="m/:id" element={<MagnetPage />} />
+        <Route path="new" element={<NewMagnet />} />
+        <Route path="p/:id" element={<PostPage />} />
+        <Route path="chats" element={<Chats />} />
+        <Route path="chats/:threadId" element={<Chats />} />
+        <Route path="me" element={<Profile self />} />
+        <Route path="u/:id" element={<Profile />} />
+        <Route path="notifications" element={<Notifications />} />
+        <Route path="admin" element={<MagnetsAdmin />} />
         <Route path="*" element={<NotFound />} />
       </Route>
       <Route path="app" element={<AppLayout />}>

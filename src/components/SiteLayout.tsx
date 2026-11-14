@@ -64,6 +64,7 @@ export default function SiteLayout() {
             <Link to="/academy">Skill Academy</Link>
             <Link to="/lancer">Skill Lancer</Link>
             <Link to="/sdc">Skill Development Center</Link>
+            <Link to="/magnets">Skill Magnets</Link>
             <Link to="/guidance">Career Guidance</Link>
             <Link to="/abc">ABC Certification</Link>
             <Link to="/roadmap">Roadmap</Link>

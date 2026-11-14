@@ -259,3 +259,6 @@
 .lc-inbox > * { min-width: 0; }
 .lc-thread { width: 100%; }
 .lc-compare td svg { margin: 0 auto; }
+.lc-radio-cards label { position: relative; }
+.lc-radio-cards input { top: 0; left: 0; width: 1px; height: 1px; margin: 0; }
+.lc-radio-cards label:focus-within { outline: 2px solid var(--gold); outline-offset: 2px; }

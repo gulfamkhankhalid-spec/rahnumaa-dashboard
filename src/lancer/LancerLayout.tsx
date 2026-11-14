@@ -91,6 +91,7 @@ export default function LancerLayout() {
               <Link to="/lancer/projects">Find work</Link>
               <Link to="/lancer/seller/gig/new">Create a gig</Link>
               <Link to="/academy/course/freelancing-launchpad">Freelancing Launchpad course</Link>
+              <Link to="/magnets/m/freelance">Freelancing community</Link>
             </div>
             <div>
               <h4>Trust</h4>
