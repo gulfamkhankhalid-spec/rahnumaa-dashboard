@@ -7,7 +7,7 @@ Content follows the Rahnuma Concept Blueprint (v1.1). All people, prices and fig
 
 | Path | What it is | Data / state |
 |---|---|---|
-| `/` | Public website: home, Skillsrator and its seven initiatives, career guidance, ABC certification, pilot domains, partners, trust and privacy, roadmap, sign-up | `src/data/site.ts` |
+| `/` | Public website: home (with the official partners logo section), official partners page (`/partners`, data in `src/data/partners.ts`), Skillsrator and its seven initiatives, career guidance, ABC certification, pilot domains, partners, trust and privacy, roadmap, sign-up | `src/data/site.ts` |
 | `/app` | Student dashboard prototype: next step, assessments, My Plan, program explorer, counselors, Skillsrator launcher, My Record & Privacy | `src/data/app.ts` |
 | `/academy` | **Skill Academy** — self-paced courses, Professional Certificates and Specializations; enrolment (audit, certificate, financial aid); course player with video, readings, graded quizzes, peer-graded projects, notes, discussion and grades; certificates with verification; instructor course builder; institution plans and admin | `src/academy/data.ts`, `src/academy/store.tsx` |
 | `/lancer` | **Skill Lancer** — freelance marketplace: gigs with Basic/Standard/Premium packages and checkout into escrow; orders with delivery, revisions, reviews and disputes; projects with proposals, milestone and hourly contracts; seller dashboard and gig builder; profiles, messages and a PKR wallet | `src/lancer/data.ts`, `src/lancer/store.tsx` |

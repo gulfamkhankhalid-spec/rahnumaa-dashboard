@@ -77,6 +77,11 @@ export default function SiteLayout() {
             <Link to="/partners">Trainers &amp; counselors</Link>
           </div>
           <div>
+            <h4>Partners</h4>
+            <Link to="/partners">Official partners</Link>
+            <Link to="/signup?role=partner">Become a partner</Link>
+          </div>
+          <div>
             <h4>Trust</h4>
             <Link to="/trust">Trust &amp; Privacy</Link>
             <Link to="/trust">Your consent</Link>

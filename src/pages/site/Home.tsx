@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import Icon, { type IconName } from '../../components/Icon'
+import { PartnerStrip } from '../../components/PartnerLogos'
 import { initiatives, pillars, principles } from '../../data/site'
 
 const pillarIcon: Record<string, IconName> = { education: 'book', employment: 'briefcase', engagement: 'heart' }
@@ -135,6 +136,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <PartnerStrip />
 
       <section className="section">
         <div className="wrap cta-band">
